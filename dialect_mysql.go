@@ -66,7 +66,7 @@ func (m *mysql) URL() string {
 		addr = fmt.Sprintf("unix(%s)", cd.Host)
 	}
 
-	s := "%s%s/%s?%s"
+	s := "mysql://%s%s/%s?%s"
 	return fmt.Sprintf(s, user, addr, cd.Database, cd.OptionsString(""))
 }
 
